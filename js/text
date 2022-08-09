@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+
+
+const colorsLi = document.querySelectorAll(".color-list li"); // all lis
+
+
+//loop on all list items
+colorsLi.forEach(li => {
+
+    // click on every list item
+    li.addEventListener("click",(e) => {
+        console.log(e.target.dataset.color); 
+
+        // set color on Root
+        document.documentElement.style.setProperty("--main-color",e.target.dataset.color)
+    });
+});
